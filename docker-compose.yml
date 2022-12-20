@@ -1,0 +1,32 @@
+version: "3"
+services:
+  db:
+    container_name: flask-proj-db
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=toor
+      - MYSQL_DATABASE=db_sample
+      - MYSQL_PORT=3306
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+    networks:
+      - flask-proj-net
+
+  app:
+    container_name: flask-proj-app
+    build: ./app
+    depends_on:
+      - db
+    ports:
+      - 5000:5000
+    networks:
+      - flask-proj-net
+
+volumes:
+  db-data:
+networks:
+  flask-proj-net:
+    name: flask-proj-net
+    

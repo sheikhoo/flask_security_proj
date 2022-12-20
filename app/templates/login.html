@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row mt-5'>
+    <div class='col-4 mx-auto'>
+      <h4 class='text-center'>ورود به سایت</h4><hr>
+      <form action="{{url_for('login')}}" method='post'>
+        <div class='form-group'>
+          <label>پست الکترونیک</label>
+          <input type='email' name='email' required class='form-control'>  
+        </div>
+        <div class='form-group'>
+          <label>رمز عبور</label>
+          <input type='password' name='upass' required class='form-control'>  
+        </div>
+        <input type='submit' name='submit' value='ورود' class='btn btn-success'>
+      </form>
+    </div>
+  </div>
+{% endblock %}
