@@ -1,7 +1,7 @@
 # flask_security_proj
 flask simple security project
 
-پروژه flask شامل صغحات
+پروژه flask شامل صفحات
 - صفحه ی login/logout
   - جلوگیری از کش اطلاعات توسط مرورگر
 - صفحه ی ثبت نام
@@ -10,6 +10,8 @@ flask simple security project
 - آپلود فایل
   - بررسی پسوند و حجم فایل
   - نیاز به لاگین 
+
+![screenshot](Screenshot.jpg)
 
 ### Start the Application with the help of Docker
 Go to the project directory and execute 
